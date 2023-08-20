@@ -6,8 +6,8 @@ The Recyclable Cooperative System is currently being planned and documented. Dev
 
 The Recyclable Cooperative System was developed as a part of an academic project to meet the needs of efficient operations for recyclable material collection and resource management. It offers functionalities that allow for the registration of recyclable materials, recording weights and quantities, a metrics dashboard, reward management, and integration with partner companies.
 
-## Technologies Used
-The Recyclable Cooperative System was developed using the following technologies:
+## The technologies that will be used
+The Recyclable Cooperative System will be developed using the following technologies:
 
 - **Programming Language:** PHP
 - **Framework:** Laravel
