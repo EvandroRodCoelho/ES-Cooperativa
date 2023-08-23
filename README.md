@@ -21,6 +21,7 @@ The Recyclable Cooperative System will be developed using the following technolo
 - [@Fabricio-Lima](https://github.com/Fabricio-Lima)
 - [@JulioCSimoesP](https://github.com/JulioCSimoesP)
 - [@Mel-iza](https://github.com/Mel-iza)
+- [@GustavoRodriguesg](https://github.com/GustavoRodriguesg)
 
 
 
