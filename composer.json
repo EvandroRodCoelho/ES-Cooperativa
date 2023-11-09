@@ -1,0 +1,14 @@
+{
+  "name": "grupofatec/es-cooperativa",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "ext-pdo": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "grupofatec\\escooperativa\\": "./src/"
+    }
+  }
+}

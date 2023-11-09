@@ -10,7 +10,6 @@ The Recyclable Cooperative System was developed as a part of an academic project
 The Recyclable Cooperative System will be developed using the following technologies:
 
 - **Programming Language:** PHP
-- **Framework:** Laravel
 - **Database:** MySQL
 
 
