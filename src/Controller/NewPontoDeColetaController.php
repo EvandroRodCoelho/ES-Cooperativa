@@ -2,7 +2,11 @@
 
 namespace grupofatec\escooperativa\Controller;
 
-class NewPontoDeColetaController
+class NewPontoDeColetaController extends Controller implements RequestController
 {
 
+    public function processRequest(): void
+    {
+        // TODO: Implement processRequest() method.
+    }
 }
