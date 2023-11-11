@@ -2,11 +2,17 @@
 
 namespace grupofatec\escooperativa\Controller;
 
-class LoginFormController implements RequestController
+use grupofatec\escooperativa\Model\Infrastructure\Service\RedirectionManager;
+
+class LoginFormController extends Controller implements RequestController
 {
 
     public function processRequest(): void
     {
-        // TODO: Implement processRequest() method.
+        if ($_SESSION['logado'] ?? false) {
+            RedirectionManager::redirect(destination: 'dashboard-patrocinador', responseCode: 303);
+        }
+
+        require_once __DIR__ . '/../View/formulario-login.php';
     }
 }
