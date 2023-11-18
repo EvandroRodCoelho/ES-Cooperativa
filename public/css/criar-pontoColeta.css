@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+form {
+    background-color: #fff;
+   
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70vw;
+    margin: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height:60vh;
+    border: 1px solid rgb(194, 192, 192);
+    padding: 50px;
+}
+
+input[type="text"]{
+ 
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    outline: none;
+    
+}
+
+
+
+input[type="submit"],
+input[type="button"] {
+    
+    
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 1px;
+    cursor: pointer;
+    display: flex;
+    align-self: end;
+    margin-top: 10em;
+    border-radius: 8px;
+
+
+    
+}
+label{
+display: flex;
+flex-direction: column;
+
+gap: 5px;
+}
+#cidade{
+width: 45%;
+
+}
+#estado{
+width: 45%;
+
+}
+#cep{
+width: 15%;
+
+}
+#logradouro{
+
+width: 75%;
+
+}
+#numero{
+width: 15%;
+
+}
+#bairro{
+width: 32.5%;
+
+}
+#complemento{
+width: 32.5%;
+
+}
+#nome{
+
+width: 100%;
+
+
+
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+select{
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+
+.pos-f-t{
+    width: 100%;
+}
+
+#logo{
+    width: 100px;
+    height: 75px;
+}

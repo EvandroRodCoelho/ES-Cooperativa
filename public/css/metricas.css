@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display:grid;
+grid-template-columns: repeat(8,1fr);
+grid-template-rows: repeat(10,0.25fr);
+height: 100vh;
+  
+    
+ 
+    overflow: hidden;
+  
+        }
+        .pos-f-t{
+            display: grid;
+            grid-column: 1/10;
+            grid-row: 1/1;
+            width: 100%;
+        }
+    #graficos{
+        width: 95%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(194, 192, 192);
+        height: 40vh;
+        display: grid;
+            grid-column: 2/10;
+            grid-row: 2/8;
+        padding-left: 45px;
+
+    }
+    .gerenciamento-coletas{
+        width: 95%;
+      
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        padding-left: 45px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(194, 192, 192);
+        height: 20vh;
+        grid-column: 2/10;
+        grid-row: 5/10
+        
+
+    }
+    .gerenciamento-usuarios{
+        width: 95%;
+       
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        padding-left: 45px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(194, 192, 192);
+        height: 20vh;
+        grid-column: 2/10;
+        grid-row: 9/10;
+        
+        
+
+    }
+    
+
+    input[type="button"] {
+        
+        
+        padding: 10px;
+        border: 1px solid #3498db;
+        border-radius: 8px;
+        cursor: pointer;
+    
+
+    
+        
+    }
+    #list-example{
+        display: flex;
+        align-self: flex-start;
+        
+      
+
+    }
+    #logo{
+        width: 100px;
+        height: 75px;
+    }
