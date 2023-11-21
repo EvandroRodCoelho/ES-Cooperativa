@@ -5,13 +5,13 @@ require_once __DIR__ . '/htmlStart.php';
 <form method="post">
     <img src="/img/logo.png" alt="" id="logo">
     <label for="email">
-        <input name="email" required id="email" placeholder="Digite seu e-mail"/>
+        <input name="email" type="email" required id="email" placeholder="Digite seu e-mail" />
     </label>
     <label for="senha">
-        <input name="senha" required id='senha' placeholder="Digite sua senha"/>
+        <input name="senha" type="password" required id='senha' placeholder="Digite sua senha" />
     </label>
 
-    <input type="submit" value="Faxer login"/>
+    <input type="submit" value="Fazer login" />
     <a href="#">Cadastre-se</a>
 </form>
 
