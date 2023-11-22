@@ -20,7 +20,6 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height:60vh;
     border: 1px solid rgb(194, 192, 192);
     padding: 50px;
 }
@@ -119,4 +118,20 @@ select{
 #logo{
     width: 100px;
     height: 75px;
+}
+
+.botao {
+    margin-top: 10em;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    background-color: #ececec;
+}
+
+.botao:hover {
+    text-decoration: none;
+    color: black;
 }

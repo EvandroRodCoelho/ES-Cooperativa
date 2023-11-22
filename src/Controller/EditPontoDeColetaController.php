@@ -7,12 +7,12 @@ use grupofatec\escooperativa\Model\Domain\Entity\PontoDeColeta;
 use grupofatec\escooperativa\Model\Infrastructure\Service\RedirectionManager;
 use InvalidArgumentException;
 
-class NewPontoDeColetaController extends Controller implements RequestController
+class EditPontoDeColetaController extends Controller implements RequestController
 {
 
     public function processRequest(): void
     {
-        if (!isset($_POST['cidade']) || !isset($_POST['estados']) || !isset($_POST['cep']) || !isset($_POST['logradouro']) || !isset($_POST['numero']) || !isset($_POST['bairro']) || !isset($_POST['nome'])) {
+        if (!isset($_POST['id']) || !isset($_POST['cidade']) || !isset($_POST['estados']) || !isset($_POST['cep']) || !isset($_POST['logradouro']) || !isset($_POST['numero']) || !isset($_POST['bairro']) || !isset($_POST['nome'])) {
             RedirectionManager::redirect(responseCode: 400);
         }
 
@@ -24,8 +24,9 @@ class NewPontoDeColetaController extends Controller implements RequestController
                 $_POST['nome'],
                 $endereco
             );
+            $pontoDeColeta->setId($_POST['id']);
 
-            $operationSuccess = $this->repository->addPontoDeColeta($pontoDeColeta);
+            $operationSuccess = $this->repository->updatePontoDeColeta($pontoDeColeta);
 
             if ($operationSuccess) {
                 RedirectionManager::redirect(responseCode: 303, params: ['sucesso' => 1]);

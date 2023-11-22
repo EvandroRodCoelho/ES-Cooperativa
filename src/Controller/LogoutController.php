@@ -11,6 +11,7 @@ class LogoutController extends Controller implements RequestController
     #[NoReturn] public function processRequest(): void
     {
         unset($_SESSION['logado']);
+        unset($_SESSION['id']);
         RedirectionManager::redirect(responseCode: 303);
     }
 }

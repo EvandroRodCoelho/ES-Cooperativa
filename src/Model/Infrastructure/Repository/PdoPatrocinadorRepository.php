@@ -44,7 +44,7 @@ class PdoPatrocinadorRepository extends PdoRepository implements PatrocinadorRep
             $queryResult['NomePatrocinador'] ?? 'joaojoao',
             $queryResult['TelefonePatrocinador'] ?? '11999999999'
         );
-        $user->setId($queryResult['id'] ?? '123');
+        $user->setId($queryResult['IdPatrocinador'] ?? '123');
 
         return $queryResult ? $user : null;
     }

@@ -3,6 +3,7 @@
 use grupofatec\escooperativa\Controller\Error404Controller;
 use grupofatec\escooperativa\Model\Infrastructure\Persistence\MySQLConnectionCreator;
 use grupofatec\escooperativa\Model\Infrastructure\Repository\PdoPatrocinadorRepository;
+use grupofatec\escooperativa\Model\Infrastructure\Repository\PdoPontoDeColetaRepository;
 use grupofatec\escooperativa\Model\Infrastructure\Service\RedirectionManager;
 use grupofatec\escooperativa\Model\Infrastructure\Service\SessionManager;
 
@@ -26,6 +27,14 @@ switch ($requiredRoute) {
     case 'POST|/':
     case 'POST|/novo-patrocinador':
         $repository = new PdoPatrocinadorRepository(MySQLConnectionCreator::createConnection());
+        $controller = new $controllerClass($repository);
+        break;
+    case 'GET|/dashboard-patrocinador':
+    case 'POST|/novo-ponto-de-coleta':
+    case 'GET|/editar-ponto-de-coleta':
+    case 'POST|/editar-ponto-de-coleta':
+    case 'GET|/deletar-ponto-de-coleta':
+        $repository = new PdoPontoDeColetaRepository(MySQLConnectionCreator::createConnection());
         $controller = new $controllerClass($repository);
         break;
     default:

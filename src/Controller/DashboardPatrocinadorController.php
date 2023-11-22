@@ -7,9 +7,8 @@ class DashboardPatrocinadorController extends Controller implements RequestContr
 
     public function processRequest(): void
     {
-        echo <<<FIM
-        <p>Patrocinador logado</p>
-        <a href="./logout">Logout</a>
-        FIM;
+        $pontosColeta = $this->repository->allPontosDeColeta();
+
+        require_once __DIR__ . '/../View/listar-pontosColeta.php';
     }
 }

@@ -81,3 +81,18 @@ body {
           width: 100px;
           height: 75px;
       }
+.botao {
+    margin-left: 10%;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    background-color: #ececec;
+}
+
+.botao:hover {
+    text-decoration: none;
+    color: black;
+}

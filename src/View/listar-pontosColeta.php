@@ -1,26 +1,24 @@
 <?php
 require_once __DIR__ . '/htmlStart.php';
+/** @var grupofatec\escooperativa\Model\Domain\Entity\PontoDeColeta[] $pontosColeta */
 ?>
 <link rel="stylesheet" href="css/listar-pontosColeta.css">
-<div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-            <a href="#">Página 1</a>
-            <a href="#">Página 2</a>
-            <a href="#">Página 3</a>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <a href="logout">Logout</a>
+            </div>
         </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="img/logo.png" alt="" id="logo">
+        </nav>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <img src="img/logo.png" alt="" id="logo">     
-    </nav>
-</div>
-  
 
     <h2>Pontos de Coleta</h2>
-    <button>Novo ponto de coleta</button>
+    <a class="botao" href="novo-ponto-de-coleta">Novo ponto de coleta</a>
 
   <table>
     <thead>
@@ -31,38 +29,18 @@ require_once __DIR__ . '/htmlStart.php';
       </tr>
     </thead>
     <tbody>
+
+    <?php foreach ($pontosColeta as $pontoColeta): ?>
       <tr>
-        <td>Dado 1</td>
-        <td>Dado 2</td>
+        <td><?= $pontoColeta->nome ?></td>
+        <td><?= str_replace(',,', ',', $pontoColeta->endereco) ?></td>
         <td class="actions">
-          <button class="edit">Editar</button>
-          <button class="delete">Deletar</button>
+          <a class="botao" href="editar-ponto-de-coleta?id=<?= $pontoColeta->id ?>">Editar</a>
+          <a class="botao" href="deletar-ponto-de-coleta?id=<?= $pontoColeta->id ?>">Deletar</a>
         </td>
       </tr>
-      <tr>
-        <td>Dado 4</td>
-        <td>Dado 5</td>
-        <td class="actions">
-          <button class="edit">Editar</button>
-          <button class="delete">Deletar</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Dado 7</td>
-        <td>Dado 8</td>
-        <td class="actions">
-          <button class="edit">Editar</button>
-          <button class="delete">Deletar</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Dado 10</td>
-        <td>Dado 11</td>
-        <td class="actions">
-          <button class="edit">Editar</button>
-          <button class="delete">Deletar</button>
-        </td>
-      </tr>
+    <?php endforeach; ?>
+
     </tbody>
   </table>
 <?php

@@ -26,6 +26,7 @@ class LoginController extends Controller implements RequestController
             }
 
             $_SESSION['logado'] = true;
+            $_SESSION['id'] = $patrocinador->id;
             RedirectionManager::redirect(destination: 'dashboard-patrocinador', responseCode: 303);
 
         } catch (InvalidArgumentException | DomainException $exception) {
