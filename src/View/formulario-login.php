@@ -12,7 +12,7 @@ require_once __DIR__ . '/htmlStart.php';
     </label>
 
     <input type="submit" value="Fazer login" />
-    <a href="#">Cadastre-se</a>
+    <a href="novo-patrocinador">Cadastre-se</a>
 </form>
 
 <?php

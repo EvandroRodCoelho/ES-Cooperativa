@@ -62,3 +62,21 @@ input[type="button"] {
 
     
 }
+
+.voltar {
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 1px;
+    cursor: pointer;
+    display: flex;
+    align-self: end;
+    margin-top: 15em;
+    border-radius: 8px;
+    color: black;
+    background-color: #ececec;
+}
+
+.voltar:hover {
+    text-decoration: none;
+    color: black;
+}

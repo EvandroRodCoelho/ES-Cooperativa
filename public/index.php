@@ -17,13 +17,14 @@ $requiredRoute = "$requestMethod|$requestPath";
 $routes = require_once __DIR__ . './../config/routes.php';
 $logged = $_SESSION['logado'] ?? false;
 
-if (!$logged && $requestPath !== '/') {
+if (!$logged && $requestPath !== '/' && $requestPath !== '/novo-patrocinador') {
     RedirectionManager::redirect(responseCode: 303);
 }
 
 $controllerClass = $routes[$requiredRoute] ?? Error404Controller::class;
 switch ($requiredRoute) {
     case 'POST|/':
+    case 'POST|/novo-patrocinador':
         $repository = new PdoPatrocinadorRepository(MySQLConnectionCreator::createConnection());
         $controller = new $controllerClass($repository);
         break;

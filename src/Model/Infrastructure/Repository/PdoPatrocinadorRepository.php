@@ -16,7 +16,7 @@ class PdoPatrocinadorRepository extends PdoRepository implements PatrocinadorRep
         $statement->bindValue(':nome', $user->nome);
         $statement->bindValue(':telefone', $user->telefone);
         $statement->bindValue(':email', $user->email);
-        $statement->bindValue(':password', password_hash($user->password, PASSWORD_ARGON2ID));
+        $statement->bindValue(':senha', password_hash($user->password, PASSWORD_ARGON2ID));
         $result =  $statement->execute();
 
         $user->setId($this->pdo->lastInsertId());

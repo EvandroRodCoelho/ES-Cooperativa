@@ -22,7 +22,7 @@ class LoginController extends Controller implements RequestController
             $correctPassword = Authenticator::authenticate($patrocinador, $_POST['senha']);
 
             if (!$correctPassword) {
-                RedirectionManager::redirect(responseCode: 303);
+                RedirectionManager::redirect(responseCode: 303, params: ['erro' => 1]);
             }
 
             $_SESSION['logado'] = true;
